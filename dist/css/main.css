@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #ffa674;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.carousel-wrapper {
+  width: auto;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-wrapper {
+    margin-top: 20px;
+  }
+}
+
+.carousel {
+  min-width: 300px;
+  min-height: 530px;
+  width: 90vw;
+  height: 50vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 10fr 0.5fr;
+      grid-template-columns: 0.5fr 10fr 0.5fr;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+}
+
+.carousel__images {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+  will-change: opacity;
+}
+
+.carousel__prev {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  display: block;
+  cursor: pointer;
+  background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 256 256'%3E%3Cpolygon points='225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093' fill='%23333'%3E%3C/polygon%3E%3C/svg%3E");
+  background-size: cover;
+  position: relative;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin: auto;
+}
+
+.carousel__next {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  display: block;
+  cursor: pointer;
+  background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 256 256'%3E%3Cpolygon points='225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093' fill='%23333'%3E%3C/polygon%3E%3C/svg%3E");
+  background-size: cover;
+  position: relative;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin: auto;
+}
+
+.animate-next {
+  pointer-events: none;
+}
+
+.animate-next .carousel__images {
+  -webkit-animation: next-image 0.65s 0.085s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          animation: next-image 0.65s 0.085s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.animate-prev {
+  pointer-events: none;
+}
+
+.animate-prev .carousel__images {
+  -webkit-animation: prev-image 0.65s 0.085s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          animation: prev-image 0.65s 0.085s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@-webkit-keyframes prev-image {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes prev-image {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes next-image {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes next-image {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
